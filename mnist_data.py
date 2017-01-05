@@ -84,9 +84,8 @@ def expend_training_data(images, labels):
         expanded_labels.append(y)
 
         # get a value for the background
-        # zero is not the value, since
-        bg_value = numpy.median(x) # this is regarded as background's value
-        #bg_value = (PIXEL_DEPTH / 2.0)
+        # zero is the expected value, but median() is used to estimate background's value 
+        bg_value = numpy.median(x) # this is regarded as background's value        
         image = numpy.reshape(x, (-1, 28))
 
         for i in range(4):
