@@ -36,7 +36,7 @@ All convolution/fully-connected layers use batch normalization.
 #### 4. Dropout
 The third fully-connected layer employes dropout technique.
 
-#### 5. Exponentially decayed learnig rate
+#### 5. Exponentially decayed learning rate
 A learning rate is decayed every after one-epoch.
 
 ### Test
