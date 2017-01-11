@@ -30,7 +30,7 @@ def CNN(inputs, is_training=True):
         # normalizer_fn = None, normalizer_params = None, <== slim.arg_scope changes these arguments
         # weights_initializer = initializers.xavier_initializer(),
         # biases_initializer = init_ops.zeros_initializer,
-        net = slim.fully_connected(net, 1024, scope='fc4')
-        net = slim.dropout(net, is_training=is_training, scope='dropout4')  # 0.5 by default
+        net = slim.fully_connected(net, 1024, scope='fc3')
+        net = slim.dropout(net, is_training=is_training, scope='dropout3')  # 0.5 by default
         outputs = slim.fully_connected(net, 10, activation_fn=None, normalizer_fn=None, scope='fco')
     return outputs
